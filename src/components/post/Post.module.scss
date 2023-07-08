@@ -1,0 +1,18 @@
+.container {
+	text-align: left;
+	// white-space: nowrap;
+	text-overflow: ellipsis;
+
+	padding: 10px 60px;
+
+	.title {
+		font-weight: 500;
+		padding-bottom: 4px;
+		cursor: pointer;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+}

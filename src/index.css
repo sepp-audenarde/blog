@@ -1,0 +1,20 @@
+html body,
+:root {
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+	background-color: rgba(245, 245, 245, 1);
+	touch-action: "none";
+
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	overflow: hidden;
+}
+

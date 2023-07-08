@@ -1,0 +1,41 @@
+.container {
+	background-color: rgb(251, 251, 251);
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	// justify-content: center;
+	box-shadow: 0px 0px 0px 2px rgba(94, 94, 94, 0.089);
+	z-index: 1;
+
+
+	.top {
+		height: 60px;
+		min-height: 60px;
+		display: flex;
+		align-items: center;
+		padding: 0 16px;
+		padding-left: 30px;
+		box-shadow: 0 4px 2px -2px rgba(94, 94, 94, 0.089);
+
+		z-index: 2;
+	}
+
+	.buttonMain {
+		margin-left: 19px;
+		outline: none;
+		border: none;
+		padding: 7px 10px;
+		border-radius: 5px;
+		font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+		font-size: 16px;
+		cursor: pointer;
+		background-color: rgb(245	, 245	, 245	, 0.7);
+
+
+		transition: background-color 0.2s ease;
+
+		&:hover {
+			background-color: rgb(228, 228, 228);
+		}
+	}
+}
