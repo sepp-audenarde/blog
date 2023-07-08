@@ -48,13 +48,13 @@ const UserInfo = () => {
 		to: { backgroundColor: colorTheme },
 	});
 
+	const image = `images/user_avatar${userInfo.id}.png`;
+
 	return (
 		<animated.div className={styles.container} style={{ backgroundColor }}>
 			<div className={styles.top}>{userInfo ? reverseName(userInfo.name) : null}</div>
 			<animated.div style={{ ...props }} className={styles.middle}>
-				<div className={styles.photo}>
-					{userInfo ? <img draggable={false} src={`images/user_avatar${userInfo.id}.png`} alt="" /> : null}
-				</div>
+				<div className={styles.photo}>{userInfo ? <img draggable={false} src={image} alt="" /> : null}</div>
 				<div className={styles.name}>{userInfo ? userInfo.name : ""}</div>
 				<div className={styles.usernick}>{userInfo ? userInfo.username : ""}</div>
 				<div className={styles.email}>{userInfo ? "Email: " + userInfo.email : ""}</div>
