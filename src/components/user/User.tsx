@@ -7,7 +7,7 @@ interface UserProps {
 		username: string;
 	};
 	index: number;
-	toUser: () => void;
+	toUser: (index:number) => void;
 }
 
 const User = ({ info, index, toUser }: UserProps) => {
