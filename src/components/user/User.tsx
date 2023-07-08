@@ -11,7 +11,7 @@ interface UserProps {
 }
 
 const User = ({ info, index, toUser }: UserProps) => {
-	const image = `/images/user_avatar${index}.png`;
+	const image = `images/user_avatar${index}.png`;
 	const { createNotification }: any = useGlobalContext();
 
 	const click = () => {

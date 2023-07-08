@@ -53,7 +53,7 @@ const UserInfo = () => {
 			<div className={styles.top}>{userInfo ? reverseName(userInfo.name) : null}</div>
 			<animated.div style={{ ...props }} className={styles.middle}>
 				<div className={styles.photo}>
-					{userInfo ? <img draggable={false} src={`/images/user_avatar${userInfo.id}.png`} alt="" /> : null}
+					{userInfo ? <img draggable={false} src={`images/user_avatar${userInfo.id}.png`} alt="" /> : null}
 				</div>
 				<div className={styles.name}>{userInfo ? userInfo.name : ""}</div>
 				<div className={styles.usernick}>{userInfo ? userInfo.username : ""}</div>
