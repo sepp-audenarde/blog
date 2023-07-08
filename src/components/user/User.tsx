@@ -1,5 +1,6 @@
 import styles from "./User.module.scss";
 import { useGlobalContext } from "../../context/context";
+import { avatars } from "../../avatars";
 
 interface UserProps {
 	info: {
@@ -7,22 +8,21 @@ interface UserProps {
 		username: string;
 	};
 	index: number;
-	toUser: (index:number) => void;
+	toUser: (index: number) => void;
 }
 
 const User = ({ info, index, toUser }: UserProps) => {
-	const image = `images/user_avatar${index}.png`;
 	const { createNotification }: any = useGlobalContext();
 
 	const click = () => {
-		toUser(index);
+		toUser(index + 1);
 		createNotification(`Показаны посты пользователя ${info.name}`);
 	};
 
 	return (
 		<div className={styles.user} onClick={click}>
 			<div className={styles.image}>
-				<img draggable={false} src={image} alt="avatar" />
+				<img draggable={false} src={avatars[index]} alt="avatar" />
 			</div>
 			<div className={styles.info}>
 				<div className={styles.name}>{info.name}</div>

@@ -2,6 +2,7 @@ import styles from "./UserInfo.module.scss";
 import { useGlobalContext } from "../../context/context";
 import { reverseName } from "../../utils/utils";
 import { useSpring, animated } from "@react-spring/web";
+import { avatars } from "../../avatars";
 
 const BrightСolors = () => {
 	const array = ["rgba(255, 255, 255, 1)", "rgba(242,242,242, 1)", "rgba(235,213,213, 1)", "rgba(234,138,138, 1)", "rgba(176,125,125, 1)"];
@@ -48,13 +49,11 @@ const UserInfo = () => {
 		to: { backgroundColor: colorTheme },
 	});
 
-	const image = `images/user_avatar${userInfo.id}.png`;
-
 	return (
 		<animated.div className={styles.container} style={{ backgroundColor }}>
 			<div className={styles.top}>{userInfo ? reverseName(userInfo.name) : null}</div>
 			<animated.div style={{ ...props }} className={styles.middle}>
-				<div className={styles.photo}>{userInfo ? <img draggable={false} src={image} alt="" /> : null}</div>
+				<div className={styles.photo}>{userInfo ? <img draggable={false} src={avatars[userInfo.id - 1]} alt="" /> : null}</div>
 				<div className={styles.name}>{userInfo ? userInfo.name : ""}</div>
 				<div className={styles.usernick}>{userInfo ? userInfo.username : ""}</div>
 				<div className={styles.email}>{userInfo ? "Email: " + userInfo.email : ""}</div>

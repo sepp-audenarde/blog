@@ -41,7 +41,7 @@ const Users = ({ users }: UserProps) => {
 			<div className={styles.users}>
 				{users
 					? users.map((e, i) => {
-							return <User key={i} info={e} index={i + 1} toUser={toUser} />;
+							return <User key={i} info={e} index={i} toUser={toUser} />;
 					  })
 					: "Loading..."}
 			</div>
